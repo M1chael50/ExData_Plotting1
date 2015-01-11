@@ -1,4 +1,4 @@
-library(datasets)
+#R script to generate png file with multiple line plots of household power consumption
 
 #download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FEDSTATS_Country.csv",destfile="./data/getdatadata_FEDSTATS_Country.csv",method="curl")
 #read in col headings only for later use

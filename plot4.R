@@ -1,3 +1,5 @@
+#R script to generate a 4 plot png file of household power consumption data
+
 #download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FEDSTATS_Country.csv",destfile="./data/getdatadata_FEDSTATS_Country.csv",method="curl")
 
 #read in col headings only for later use
@@ -7,6 +9,10 @@ data1 <- read.table("./data/household_power_consumption.txt",header=FALSE,skip=6
 colnames(data1) <- colnames(names)
 
 data1$TimeStamp <- strptime(paste(data1$Date,data1$Time),"%d/%m/%Y%H:%M:%S")
+#open png device
+png("plot4.png",width=480, height=480)
+
+#set frame size
 par(mfrow=c(2,2))
 
 #Top left plot Global Active Power
@@ -27,7 +33,7 @@ plot(data1$TimeStamp,data1$Global_reactive_power,type="l",ylab="Global_reactive_
 
 
 #produce png file
-dev.copy(png,"plot4.png",width=480, height=480)
+#dev.copy(png,"plot4.png",width=480, height=480)
 dev.off() # close png plot file device
 
 

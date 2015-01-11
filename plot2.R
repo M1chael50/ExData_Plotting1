@@ -1,4 +1,5 @@
-library(datasets)
+#R script to generate line plot of household power consumption
+# new colum TimeStamp of type DateTime created 
 
 #download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FEDSTATS_Country.csv",destfile="./data/getdatadata_FEDSTATS_Country.csv",method="curl")
 #read in col headings only for later use
