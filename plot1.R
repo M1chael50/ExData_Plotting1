@@ -1,9 +1,9 @@
 
 
 #download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FEDSTATS_Country.csv",destfile="./data/getdatadata_FEDSTATS_Country.csv",method="curl")
-
+#read in col headings only for later use
 names <- read.csv("./data/household_power_consumption.txt",header=TRUE,nrows=1,sep=";",na.strings = "?")
-# Only interested in 2 days of data, skip 66638, nrows 2879 = 69517 - 66638
+# Only interested in 2 days of data, 2007-02-01 and 2007-02-02, so skip first 66638 lines and only load nrows 2879 = 69517 - 66638
 data1 <- read.table("./data/household_power_consumption.txt",header=FALSE,skip=66637,nrows=2879,sep=";",na.strings = "?")
 #Set names
 colnames(data1) <- colnames(names)
