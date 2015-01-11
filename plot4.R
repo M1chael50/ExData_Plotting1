@@ -13,16 +13,16 @@ par(mfrow=c(2,2))
 plot(data1$TimeStamp,data1$Global_active_power,type="l",ylab="Global Active Power",xlab="")
 
 #Top right plot Vloltage
-plot(data1$TimeStamp,data1$Voltage,type="l",ylab="Voltage",xlab="")
+plot(data1$TimeStamp,data1$Voltage,type="l",ylab="Voltage",xlab="datatime")
 
 #Bottom left Energy sub metering
 plot(data1$TimeStamp,data1$Sub_metering_1,type="l",ylab="Energy sub metering",xlab="")
 points(data1$TimeStamp,data1$Sub_metering_2,type="l",col=2)
 lines(data1$TimeStamp,data1$Sub_metering_3,type="l",col="blue")
-legend("topright",lty=1,legend=colnames(data1[,c(7,8,9)]),col=c(1,2,"blue"),cex=0.4)
+legend("topright",lty=1,legend=colnames(data1[,c(7,8,9)]),col=c(1,2,"blue"),cex=0.6,bty="n")
 
 #Bottome right plot Global reactive power
-plot(data1$TimeStamp,data1$Global_reactive_power,type="l",ylab="Global_reactive_power",xlab="")
+plot(data1$TimeStamp,data1$Global_reactive_power,type="l",ylab="Global_reactive_power",xlab="datatime")
 
 
 
